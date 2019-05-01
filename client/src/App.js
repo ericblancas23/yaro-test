@@ -7,12 +7,12 @@ import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 
 //import redux and provider
-import { Provider } from 'react-redux';
-import store from './store';
+// import { Provider } from 'react-redux';
+// import store from './components/store';
 
 function App() {
   return (
-    <Provider store={store}>
+    // <Provider store={store}>
     <Router>
     <div>
         <Navbar />
@@ -21,7 +21,7 @@ function App() {
         <Route exact path='/login' component={Login}/>
     </div>
     </Router>
-    </Provider>
+    // </Provider>
   );
 }
 
