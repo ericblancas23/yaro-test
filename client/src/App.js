@@ -6,8 +6,13 @@ import Login from './components/Auth/Login';
 import { BrowserRouter as Router, Route} from 'react-router-dom';
 import './App.css';
 
+//import redux and provider
+import { Provider } from 'react-redux';
+import store from './store';
+
 function App() {
   return (
+    <Provider store={store}>
     <Router>
     <div>
         <Navbar />
@@ -16,6 +21,7 @@ function App() {
         <Route exact path='/login' component={Login}/>
     </div>
     </Router>
+    </Provider>
   );
 }
 
